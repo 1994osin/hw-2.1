@@ -79,9 +79,11 @@ public class Main {
         int daysIfWeLose250Grams = loseWeightInGrams / lose250GramsPerDay;
         int daysIfWeLose500Grams = loseWeightInGrams / lose500GramsPerDay;
         int daysToLoseWeightOnAverage = (daysIfWeLose250Grams + daysIfWeLose500Grams) / 2;
+        int theRestOfTheDaysToLoseWeightOnAverage = (daysIfWeLose250Grams + daysIfWeLose500Grams) % 2;
         System.out.println("Если мы худеем на " + lose250GramsPerDay + " грамм в день, то нам потребуется " + daysIfWeLose250Grams + " дней");
         System.out.println("Если мы худеем на " + lose500GramsPerDay + " грамм в день, то нам потребуется " + daysIfWeLose500Grams + " дней");
         System.out.println("В среднем нам потребуется " + daysToLoseWeightOnAverage + " день для похудения");
+        System.out.println("Остаток дней в среднем " + theRestOfTheDaysToLoseWeightOnAverage + " дней");
 
         // Task 8
         double mashaSalary = 67760;
@@ -99,5 +101,7 @@ public class Main {
                 "Годовой доход вырос на " + denisSalaryDifference + " рублей");
         System.out.println("Кристина теперь получает " + kristinaSalaryAfterThePromotion + " рублей. " +
                 "Годовой доход вырос на " + kristinaSalaryDifference + " рублей");
+
+
     }
 }
